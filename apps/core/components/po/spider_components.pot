@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spider::Components 0.1\n"
+"POT-Creation-Date: 2011-11-15 16:12+0100\n"
+"PO-Revision-Date: 2009-06-30 16:58+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: widgets/admin/admin.rb:21
+msgid "Administration"
+msgstr ""
+
+#: widgets/admin/admin.rb:48
+msgid "Manage Data"
+msgstr ""
+
+#: widgets/admin/admin.rb:53
+msgid "guest"
+msgstr ""
+
+#: widgets/crud/crud.rb:125
+msgid "Cancel"
+msgstr ""
+
+#: widgets/crud/crud.rb:126
+msgid "Ok"
+msgstr ""
+
+#: widgets/list/list.rb:81
+msgid "Go"
+msgstr ""
+
+#: widgets/list/list.rb:82
+msgid "Clear"
+msgstr ""
+
+#: widgets/table/table.rb:154 public/js/utils.js:14
+msgid "Yes"
+msgstr ""
+
+#: widgets/table/table.rb:154 public/js/utils.js:19
+msgid "No"
+msgstr ""
+
+#: widgets/list/list.shtml:10
+msgid "Search"
+msgstr ""
+
+#: widgets/list/list.shtml:17 widgets/table/table.shtml:66
+msgid "No element"
+msgstr ""
+
+#: widgets/list/list.shtml:27
+msgid "Delete"
+msgstr ""
+
+#: widgets/table/table.shtml:28 widgets/table/table.shtml:31
+msgid "Previous"
+msgstr ""
+
+#: widgets/table/table.shtml:58 widgets/table/table.shtml:61
+msgid "Next"
+msgstr ""
+
+#: public/js/utils.js:9
+msgid "Are you sure?"
+msgstr ""

@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spider::Messenger 0.1\n"
+"POT-Creation-Date: 2011-05-09 17:37+0200\n"
+"PO-Revision-Date: 2009-06-30 16:44+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: models/email.rb:7
+msgid "From"
+msgstr ""
+
+#: models/email.rb:8 models/sms.rb:7
+msgid "To"
+msgstr ""
+
+#: models/email.rb:9
+msgid "Headers"
+msgstr ""
+
+#: models/email.rb:10
+msgid "Subject"
+msgstr ""
+
+#: models/email.rb:11
+msgid "Body"
+msgstr ""
+
+#: models/message.rb:6
+msgid "Ticket"
+msgstr ""
+
+#: models/message.rb:7
+msgid "Last try"
+msgstr ""
+
+#: models/message.rb:8
+msgid "Next try"
+msgstr ""
+
+#: models/message.rb:9
+msgid "Attempts"
+msgstr ""
+
+#: models/message.rb:10
+msgid "Backend"
+msgstr ""
+
+#: models/message.rb:11
+msgid "Backend id"
+msgstr ""
+
+#: models/message.rb:12
+msgid "Last status"
+msgstr ""
+
+#: models/message.rb:13
+msgid "Sent at"
+msgstr ""
+
+#: models/message.rb:15
+msgid "Retry"
+msgstr ""
+
+#: models/message.rb:16
+msgid "Queued"
+msgstr ""
+
+#: models/message.rb:17
+msgid "Failed"
+msgstr ""
+
+#: models/message.rb:18
+msgid "Handed to backend"
+msgstr ""
+
+#: models/message.rb:19
+msgid "Sent"
+msgstr ""
+
+#: models/message.rb:20
+msgid "Delivered"
+msgstr ""
+
+#: models/sms.rb:8
+msgid "Text"
+msgstr ""
+
+#: views/index.shtml:2
+msgid "Queues"
+msgstr ""
+
+#: views/index.shtml:7 views/queue.shtml:2
+msgid "Sent messages"
+msgstr ""
+
+#: views/index.shtml:8 views/queue.shtml:4
+msgid "Queued messages"
+msgstr ""
+
+#: views/index.shtml:9 views/queue.shtml:6
+msgid "Failed messages"
+msgstr ""

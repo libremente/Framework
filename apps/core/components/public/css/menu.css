@@ -1,0 +1,47 @@
+.spider.components.menu {
+    margin-left:15px;
+}
+
+
+.spider.components.menu #menu_bottom{
+    height:35px;
+}
+
+.spider.components.menu .section_title{
+    background-color: #F2F2F2;
+    margin-right: 10px;
+    border: 1px solid #CCCCCC;
+    padding: 5px 5px;
+}
+
+.spider.components.menu ul.section_items{
+    padding-left: 0px;
+    padding-right: 10px;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    border-collapse: collapse;
+}
+
+.spider.components.menu .section_items li{
+    padding: 5px 10px;
+    border: 1px solid #CCCCCC;
+    
+}
+
+.spider.components.menu .section_items li a:link, .spider.components.menu .section_items li a:visited {
+    color: #5B80B2;
+
+}
+.spider.components.menu .section_items li a:hover {
+    color: black;
+
+}
+
+.spider.components.menu li a {
+    text-decoration: none;
+}
+
+.spider.components.menu .active a:link, .spider.components.menu .active a:visited{
+    color: black;
+}

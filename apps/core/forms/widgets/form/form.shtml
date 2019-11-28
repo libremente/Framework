@@ -1,0 +1,55 @@
+<div class="{ @widget[:css_class] }">
+    <tpl:assets widgets="forms:datetime,forms:file,forms:select,forms:search-select,forms:textarea" />
+    <!-- <tpl:asset type="css" src="css/form.css" /> DA FARE:correggere css che fa casini con bootstrap se incluso -->
+	<tpl:asset type="js" src="form.js" />
+	<div sp:if="@error" class='errors'>
+		<ul>
+		    <li sp:if="@errors[nil]" sp:each="@errors[nil] |err|">
+		        { err }
+		    </li>
+			<sp:pass sp:each="@names |element|">
+				<li sp:if="@errors[element]" sp:each="@errors[element] |err|">
+					{ err }
+				</li>
+			</sp:pass>
+            <sp:pass sp:each="(@errors.keys - @names) |element|">
+				<li sp:if="@errors[element]" sp:each="@errors[element] |err|">
+					{ err }
+				</li>
+			</sp:pass>
+		</ul>
+
+	</div>
+	<div sp:if="@action == :form">
+		<form action="{ @form_action }" method="POST" class="{ @form_css_class }" sp:attr-if="@enctype,enctype,@enctype">
+			<input type="hidden" name="_w{ @widget[:param] }[pk]" value="{ @pk }">
+			<sp:pass sp:each="@hidden_inputs |input|">
+				<sp:run obj="input" />
+			</sp:pass>
+			<div class="fields">
+				<forms:element_row sp:each="@names |element|" element="element" required="@inputs[element].required?"/>
+			</div>
+			<div class="form-actions">
+				<input type='submit' class="btn btn-primary" name='_w{ @widget[:param] }[submit]' value='{ @submit_text }'>
+				<input type='submit' sp:if="@show_submit_and_stay" class="btn" name='_w{ @widget[:param] }[submit_and_stay]' value='{ @submit_and_stay_text }'>
+				<input type='submit' sp:if="@show_submit_and_new" class="btn" name='_w{ @widget[:param] }[submit_and_new]' value='{ @submit_and_new_text }'>
+				<input sp:each="@submit_buttons |text|" type='submit' class="btn" name='_w{ @widget[:param] }[submit]' value='{ text }'>
+			</div>
+		</form>
+		<div class="sub_links" sp:if="!@sub_links.empty?">
+			<h4>Dati collegati:</h4>
+			<ul>
+				<li sp:each="@sub_links |el, l|">
+					<a href="{ @widget[:request_path] }/{ l[:link] }">{ l[:label] }</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div sp:if="@action == :sub" class="sub_element_crud">
+		<h4 class="sub_element_title">Gestione { @sub_element.label.downcase } di 
+			<a href="{ @widget[:request_path] }/{ @pk }">{ @form_desc }</a>
+		</h4>
+		<sp:run obj="@crud" />
+	</div>
+
+</div>

@@ -1,0 +1,105 @@
+/* @override http://localhost:8989/spider/components/w/table/pub/table.css */
+
+.spider.components.table .no_result{
+    color: #777777;
+    margin: 12px;
+}
+
+.spider.components.table table{
+    border: 2px solid #d5d5f7;
+    border-collapse: collapse;
+    margin: 10px 20px;
+    width: 95%
+    
+}
+
+.spider.components.table td, .spider.components.table th{
+    border: 1px solid #EFEFEF;
+    padding: 3px 8px;
+}
+
+.spider.components.table td{
+	font-size: .9em;
+}
+
+
+.spider.components.table th{
+    text-align: left;
+    background-color: #f2f2f2;
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.spider.components.table th a, .spider.components.table th{
+    color: #5b80b2;
+    text-decoration: none;
+}
+.spider.components.table th a {
+    border-bottom: 1px dotted #6172c3;
+}
+
+.spider.components.table td a {
+    border-bottom: 1px dotted blue;
+    color: blue;
+    text-decoration: none;
+}
+.spider.components.table th a:hover {
+    color: #adc4f0;
+}
+
+.spider.components.table table td ul{
+    margin: 0px 20px;
+    padding: 0;
+    line-height: 1em;
+}
+
+/*.spider.components.table tr.odd:hover td, .spider.components.table tr.even:hover td, .spider.components.table td a:hover {
+    background-color: #ececf0;
+}*/
+.spider.components.table tr.even{
+    background-color: #fdfdfd;
+}
+.spider.components.table tr.odd{
+    background-color: #FFFFFF;
+}
+
+
+.spider.components.table .pagination{
+    text-align: center;
+    margin-top: 6px;
+    margin-left: 6px;
+    background-color: white;
+    font-size: 75%;
+    color: #666699;
+}
+
+.spider.components.table .pagination td{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.spider.components.table .pagination li{
+    float: left;
+    list-style: none;
+    margin: 0 3px !important;
+}
+
+.spider.components.table .pagination a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.spider.components.table .pagination a.page{
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 1.1em;
+    color: black;
+}
+
+.spider.components.table .pagination .active a{
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #CC0000;
+}

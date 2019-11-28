@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/* line 33, ../../sass/grid.scss */
+body {
+  width: 100%;
+  *zoom: 1;
+}
+/* line 19, ../../sass/grid.scss */
+body:before, body:after {
+  content: "";
+  display: table;
+}
+/* line 24, ../../sass/grid.scss */
+body:after {
+  clear: both;
+}
+
+/* line 48, icons/*.png */
+.icons-sprite, .icons-logout, #header #admin_controls .logout_link {
+  background-image: url('../../img/icons-s8b18557db6.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../../../../home/fabiano/.rvm/gems/ruby-1.9.3-p551/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-logout, #header #admin_controls .logout_link {
+  background-position: 0 0;
+}
+
+/* line 12, ../../sass/admin.scss */
+#admin form.form-horizontal .help-block {
+  max-width: 550px;
+}
+/* line 16, ../../sass/admin.scss */
+#admin form.form-horizontal input[type="text"], #admin form.form-horizontal textarea, #admin form.form-horizontal select, #admin form.form-horizontal .uneditable-input {
+  width: 300px;
+}
+/* line 20, ../../sass/admin.scss */
+#admin form.form-horizontal select {
+  width: 310px;
+}
+/* line 24, ../../sass/admin.scss */
+#admin form.form-horizontal input.btn {
+  width: auto;
+}
+/* line 28, ../../sass/admin.scss */
+#admin form.form-horizontal .form-actions {
+  padding-left: 250px;
+}
+
+/* line 38, ../../sass/admin.scss */
+#header {
+  padding-bottom: 10px;
+  background: url('../../img/css/header_bg.png?1446829179') repeat-x scroll center top;
+  background-color: #417690;
+  position: relative;
+  border-bottom: 2px solid #555555;
+}
+/* line 45, ../../sass/admin.scss */
+#header #header_top {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../../sass/admin.scss */
+#header h1 {
+  font-size: 27px;
+  color: #444444;
+}
+/* line 54, ../../sass/admin.scss */
+#header #main_title {
+  float: left;
+  margin-top: 8px;
+  margin-left: 40px;
+}
+/* line 59, ../../sass/admin.scss */
+#header #main_title h1 {
+  margin-bottom: 8px;
+}
+/* line 63, ../../sass/admin.scss */
+#header #admin_controls {
+  font-size: .95em;
+  float: right;
+  margin-top: 12px;
+  margin-right: 30px;
+  color: white;
+}
+/* line 70, ../../sass/admin.scss */
+#header #admin_controls a {
+  color: white;
+}
+/* line 74, ../../sass/admin.scss */
+#header #admin_controls .welcome {
+  margin-right: 6px;
+}
+/* line 78, ../../sass/admin.scss */
+#header #admin_controls .logout_link {
+  background-position: right;
+  padding-right: 25px;
+  margin-left: 6px;
+}
+/* line 87, ../../sass/admin.scss */
+#header #app_buttons {
+  height: 68px;
+  min-width: 200px;
+  margin-left: 60px;
+  background-color: #f4f5f6;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  overflow: hidden;
+  *zoom: 1;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 98, ../../sass/admin.scss */
+#header #app_buttons a {
+  color: #222222;
+}
+/* line 102, ../../sass/admin.scss */
+#header #app_buttons div {
+  min-width: 55px;
+  padding: 2px;
+  height: 55px;
+  margin: 5px;
+  border: 1px solid #BBBBBB;
+  text-align: center;
+  float: left;
+  background-color: #EEEEEE;
+}
+/* line 112, ../../sass/admin.scss */
+#header #app_buttons div img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 119, ../../sass/admin.scss */
+#header #app_buttons div span.name {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  display: block;
+  font-size: 0.8em;
+}
+/* line 126, ../../sass/admin.scss */
+#header #app_buttons a.active div {
+  border: 1px solid #DDDD00;
+}
+/* line 128, ../../sass/admin.scss */
+#header #app_buttons a.active div img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 131, ../../sass/admin.scss */
+#header #app_buttons a.active div span.name {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 139, ../../sass/admin.scss */
+#admin-switcher-menu .section_title {
+  font-size: 14px;
+  line-height: 36px;
+}
+
+/* line 149, ../../sass/admin.scss */
+#spider-admin .container-fluid .content {
+  background-color: white;
+}
+/* line 155, ../../sass/admin.scss */
+#spider-admin .page_navigation.pagination {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+/* line 160, ../../sass/admin.scss */
+#spider-admin .page_navigation.pagination .active_page {
+  font-size: 120%;
+  font-weight: 700;
+}
+/* line 164, ../../sass/admin.scss */
+#spider-admin .page_navigation.pagination ul.lista_pagine {
+  list-style: none;
+  overflow: hidden;
+  display: none;
+}
+/* line 170, ../../sass/admin.scss */
+#spider-admin .page_navigation.pagination .active_page a {
+  font-size: 120%;
+  font-weight: 700;
+  cursor: default;
+}
+/* line 176, ../../sass/admin.scss */
+#spider-admin .page_navigation.pagination li.previous_link, #spider-admin .page_navigation.pagination li.next_link {
+  border-left-width: 1px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 186, ../../sass/admin.scss */
+#container, .spider-admin-container {
+  background: url('../../img/css/side_bg.png?1446829179') repeat-y;
+  position: relative;
+  min-width: 940px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #CCCCCC;
+  min-height: 500px;
+  /* tolto il clearfix di compass perchè non fa comparire la barra orizzontale quando ridimensiono la pag di admin */
+  /* @include clearfix(); */
+}
+/* line 197, ../../sass/admin.scss */
+#container #sidebar, #container > .spider-admin-sidebar, .spider-admin-container #sidebar, .spider-admin-container > .spider-admin-sidebar {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 220px;
+  padding: 20px 10px;
+}
+/* line 204, ../../sass/admin.scss */
+#container #sidebar li.active a, #container > .spider-admin-sidebar li.active a, .spider-admin-container #sidebar li.active a, .spider-admin-container > .spider-admin-sidebar li.active a {
+  text-decoration: underline;
+}
+/* line 208, ../../sass/admin.scss */
+#container #sidebar li, #container > .spider-admin-sidebar li, .spider-admin-container #sidebar li, .spider-admin-container > .spider-admin-sidebar li {
+  margin-bottom: 1px;
+}
+/* line 213, ../../sass/admin.scss */
+#container #content, #container > .spider-admin-content, .spider-admin-container #content, .spider-admin-container > .spider-admin-content {
+  margin-left: 240px;
+}
+
+/* line 218, ../../sass/admin.scss */
+.crud .table {
+  width: auto;
+  min-width: 400px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 227, ../../sass/admin.scss */
+  #header #main_title {
+    font-size: 10px;
+  }
+}

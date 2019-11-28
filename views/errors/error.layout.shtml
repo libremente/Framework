@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<tpl:asset type="css" src="css/error_page.css" />
+	<tpl:asset name="jquery" />
+	<tpl:asset sp:if="@devel" type="js" src="js/error_page.js" />
+
+    <head>
+        <title>{ @error_msg }</title>
+		<!-- <script sp:if="@devel" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> -->
+        <script sp:each='@assets[:js] |script|' type="text/javascript" src="{ script }"></script>
+        <link sp:each='@assets[:css] |css_file|' rel='stylesheet' href='{ css_file }' />
+    </head>
+    <body>
+		<div id="header">
+		</div>
+        <div id="content">
+            <sp:yield />
+        </div>
+		<div id="footer">
+			<div id="exc_uuid" sp:if="@exception_uuid">
+				<!-- _(The identifier of this error is %s. Please refer to it when requesting assistance.) % @exception_uuid -->
+				Spiacente, si è verificato l' errore con identificativo <strong>{ @exception_uuid }</strong>. Riprova più tardi.
+			</div>
+			<div id="contact" sp:if="!@admin_email.blank?">
+				<!-- _(If you need to contact the administrator to provide additional information, you may send an e-mail to) -->
+				Se il problema persiste puoi scrivere a <a href="mailto:{ @admin_email }?subject={ @email_subject }">{ @admin_email }</a> specificando nome dell'ente sul quale stavi lavorando ed una breve descrizione del contesto in cui si è presentato l'errore.
+			</div>
+		</div>
+		<hr id="bottom_break">
+		<div id="debug" sp:if="@devel">
+			<h4>_(Debug information):</h4>
+			<div id="request_params">
+				Request params:
+				<pre>{ @request_params }</pre>
+			</div>
+			<div id="session">
+				Session:
+				<pre>{ CGI::escapeHTML(@session) }</pre>
+			</div>
+			<div id="exception_details">
+				Exception: <pre id="exception_message">{ @exception }</pre>
+			</div>
+			<div id="exception_backtrace">
+				Backtrace:
+				<ul>
+					<li sp:each="@backtrace |line|">
+						<a href="{ line[:link] }">{ line[:text] }</a>
+						<a name="{ line[:self] }" sp:tag-if="line[:first_seen]">
+							<pre class="backtrace_info" sp:if="line[:info]">{ CGI.escapeHTML(line[:info]) }</pre>
+						</a>
+						<div class="locals" sp:if="line[:locals] && !line[:locals].empty?">
+							Locals:
+							<div>
+								<span sp:each="line[:locals] |name, val|"><span class="var-name local-name">{ name }</span>
+									<pre class="var-value local-var local-{ line[:index] }-{ name }">{ CGI.escapeHTML(val.inspect.to_s) }</pre>
+								</span>
+							</div>
+						</div>
+						<div class="instance_vars" sp:if="line[:first_seen] && line[:instance_variables] && !line[:instance_variables].empty?" class="instance_variables">
+							Instance variables:
+							<div>
+								<span sp:each="line[:instance_variables] |name, val|"><span class="var-name iv-name">{ name }</span>
+									<pre class="var-value iv iv-{ line[:index] }-{ name }">{ CGI.escapeHTML(val.inspect.to_s) }</pre>
+								</span>
+							</div>
+						</div>
+						<div class="instance_vars" sp:if="!line[:first_seen]">
+							<a href="#{ line[:self] }">Instance variables</a>
+						</div>
+
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+    </body>
+</html>

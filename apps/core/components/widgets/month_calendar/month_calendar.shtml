@@ -1,0 +1,25 @@
+<div>
+    <tpl:asset type="css" src="css/month_calendar.css" />
+    <tpl:asset type="js" src="widgets/month_calendar.js" />
+    <table class="{ @widget[:css_class] }">
+        <thead>
+            <tr>
+                <th colspan="7" scope="row" id="current_month">
+                    <a href="{ @request[:path] }?_w{ @widget[:param_u] }%5Bd%5D={ @prev_link }"><span>&lt;&lt;</span></a>
+                    { @current_month_name } { @year }
+                    <a href="{ @request[:path] }?_w{ @widget[:param_u] }%5Bd%5D={ @next_link }"><span>&gt;&gt;</span></a>
+                </th>
+            </tr>
+            <tr>
+                <th scope="col" sp:each="@week_days |i|" id="{ @days_short_names[i] }_{ i }">{ @days_short_names[i] }</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr sp:each="@rows |row|">
+                <td sp:each_with_index="row |col, i|"  headers="event_calendar-current_month event_calendar-{ @days_short_names[i+1] }_{ i }" class="{ col[:classes].join(' ') }">
+                    { col[:day] }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

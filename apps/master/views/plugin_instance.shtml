@@ -1,0 +1,43 @@
+<div>
+    <div class="page-title title-block">
+        <h2>{ @instance.name }</h2>
+        <div class="status { @instance['status.id'] }">{ @instance.status }</div>
+        <a href="{ @instance.id }/edit" class="manage edit">_(Edit settings)</a>
+    </div>
+    <div class="info">
+        _(Last report): { @instance.obj_modified.lformat }
+    </div>
+    <div class="plugin error" sp:if="@instance.status.id.to_sym == :error">
+        { @last_error.obj_created.lformat } Error: { @last_error.subject }
+        <div class="message">
+            { (@last_error.body) }
+        </div>
+    </div>
+
+    <table id="plugin-values" class="list-table">
+        <tr>
+            <th width="30%">_(Field)</th>
+            <th>_(Value)</th>
+        </tr>
+        <tr sp:each="@fields |key|">
+            <td>
+                <a href="{ @instance.id }/data/{ key }">{ _(@labels[key]) }
+            </td>
+            <td>{ @last.value(key) || 0 } { (@metadata[key] ? @metadata[key]["units"] : '') }</td>
+        </tr> 
+    </table>
+
+
+    <div class="triggers">
+        <div class="list-title title-block">
+            <h3>_(Triggers):</h3> <a href="{ @instance.id }/triggers/new" class="add manage">_(Add)</a>
+         </div>
+        <ul>
+            <li sp:each="@instance.triggers |trigger|">
+                { trigger.description_html }
+                <a href="{ @instance.id }/triggers/{ trigger.id }" class="manage edit">_(edit)</a>
+                <a href="?remove_trigger={ trigger.id }" class="manage remove">remove</a>
+            </li>
+        </ul>
+    </div>
+</div>

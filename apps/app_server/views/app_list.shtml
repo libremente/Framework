@@ -1,0 +1,8 @@
+<ul>
+    <li sp:each="@apps |app|">
+        <h5>{ app.name } ({ app.version })</h5>
+        <div class="description" sp:if="!app.description.blank?">
+            { app.description }
+        </div>
+    </li>
+</ul>

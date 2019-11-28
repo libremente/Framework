@@ -1,0 +1,355 @@
+== 0.6.39
+* Corretto messaggio di log nel messenger_helper
+* Aggiunto caso con ruby 2 a convert_object
+* Corretto redirect del form se eccezione per chiave non univoca
+* Cambiato path per icone di bootstrap che le carica dal framework
+* Commentato costrutto if..then perchè generava problemi con l'associazione many to many
+* Aggiunto metodo di classe per send_sms
+* Cambiato controllo su invio sms e controllo su ruby2
+* Aggiornati asset, Aggiunto js per bootbox
+* Aggiunto plugin a editor moduli
+* Corretti asset per plugin advlist e pagebreak tinymce, Corretto layout
+* Corretti assets per tinymce, aggiunti css tinymce e corretto content.min.css
+* Aggiunto editor tinymce anche in master
+* Fatto il convert_object sulla scene del template.rb per non avee problemi con caratteri strani
+* Modifiche per invio sms senza blocco con +39
+* Defer su js, uuid errore con id_comune, minif di datepicker-it
+* Modifica per problemi con logout fatto su classe che dava errore in master
+* modificata chiamata di Celluloid in base alla versione ruby
+* aggiunto require celluloid
+* Modificata widget select per precaricare dati selected
+* Modificato search_select per problemi del force_encoding su ruby 187
+* Aggiunto force_encodig per jquery autocomplete 
+* Modificata logica di creazione indice primario nel caso di fields multipli
+== 0.6.38
+* Aggiunto path per fare il logout cas
+* Modificato cas.rb e log vari
+* aggiunto controllo per ruby 1.8
+* Cancellazione di un file caricato con widget file input
+* aggiunta options host per webserver, a seguito di modifiche intervenute su gem rack ver 1.6.0
+* aggiunta gestione encoding per ruby > 1.8.7 nella funzione to_json
+* aggiunta gestione corretta per usare pry e pry-byebug
+* Ricavo encoding da request per creare un tempfile con upload file da form
+== 0.6.37
+== 0.6.36
+* correzioni bugs
+* gestione di caricamento del path dell'app rivisto e corretto anche per windows
+* Ricompilato admin.css
+== 0.6.35
+* modificata instanziazione CmdParser in base all'ultimo rilascio della gemma CmdParse
+* Aggiunto controllo per files .shtml in respawing e attivato celluloid.thread per Listen
+* modifiche correttive relative all'uso di ByeBug e corretta gestione del respawn con Listen
+* Modifiche per gemma fssm sostituita con listen
+* Usato il parametro HTTP_X_FORWARDED_PROTO nel caso di reverse_proxy con ssl-offloading
+* Modifiche per problemi con respawn, kill dei child_thread e trap
+* Corretto il redirect su login per admin
+* Cambiata pagina di errore con invio mail con nome comune
+* Aggiunto valore di default per site.tech_admin.email con errori@soluzionipa.it
+== 0.6.34
+* modificata logica di gestione delle date in odbc
+* Cambiato http_url con http_s_url e corretto funzioni
+* modificata funzionalità riguardante alias per ordinamento in mssql
+* Rimesso controllo se site.ssl attivo
+* Adeguata https_url con action come http_url in app.rb
+* Modifiche su invio mail multipart per problema con comunicazioni con immagini
+* Aggiunto un controllo se l'elemento non blank in set_loaded_value del base_model
+* Controllo se gia definita la costante per non avere il warning:already initialized constant News/Contents
+* Aggiunta funzione to_bool alla class String
+* Cambiata gestione allegati in send_email del messenger_helper
+* controllo se campo esiste in schema
+* Aggiunto controllo relativo al tipo di assoc_type
+* modificata chiamata rufus perchè non + supportata
+* aggiunto controllo in creazione indice non contemplando eventuali models che sono estensioni di altri
+== 0.6.33
+* Modifiche per problemi con accenti e chiamate json
+* Encode aggiunto su funzione inspect
+* Corretto problemi in search_table che mantiene il parametro per la ricerca
+* Fatta conversione per invio delle mail con dati nella scene accentati
+* Usato force_encoding per invio della mail su tutti i campi della scene
+* Settato a true il single sign out del Cas
+* Fatto metodo ricorsivo per convertire un oggetto ruby in utf8 e cambiato il messenger helper
+* Aggiunto a livello di classe Object un metodo per convertire ricorsivamente in utf8 le stringhe nell'oggetto passato
+* Implementato metodo logout_cas in cas_login_mixin
+* Modifiche per CAS, cambiato lambda con Proc.new
+
+== 0.6.32
+* Correzioni per gestione transazioni e metodi per lista per mod cms
+* Aggiunto il force_encoding sui campi della mail per problemi con accenti
+* Correzione al env.rb per problemi di encoding
+
+== 0.6.31
+* Forzato il logout se password sbagliata per problemi con amministratori servizi
+* Corretto in table.rb il controllo sugli elementi multipli per problema
+* Modifica per avere le tabelle del calendario eventi accessibile
+* Corretto problema nella widget select, come nei gruppi utenti
+* Aggiunto controllo per avere una core:table non paginata
+* Modifiche per widget form che se riceve stringhe non utf8 le converte in utf8 e accept-charset
+* Aggiunto bootstrap3 negli assets e come cartella
+* Modifiche per wait_counters che da errore in 1.9.3, mod per bsmselect, mod in encoding per 1.9.3
+* Aggiunto controllo su gemma iconv che ora è deprecata dalla versione 1.9, cambiato repo di default in options
+
+== 0.6.30
+* Aggiunto datatype LONGTEXT per mysql
+* Aggiunto controllo per rufus-scheduler > della versione 3.0
+* Aggiunto controllo per riconoscere IE11 per problemi caricamento file
+* Aggiunta versione backend skebby per sms
+* Corretto utilizzo degli assets per jquery ui 1.9 con autocomplete
+
+== 0.6.29
+* Sostituito metodo lambda per problemi con ruby 1.9.3 in site_map del cms
+* Cambiata gestione invio sms con sender_name e prefisso internazionele, mail (smpt -> smtp )
+* Modifiche alla widget table per paginazione per gestione pagina di dettaglio e ritorno a pagina corrente in elenco
+* Corretto db_mapper per condition sugli elementi di un modello
+
+== 0.6.28
+* Visualizzazione in core:table dei dati collegati, eliminazione dipendenze circolari in uow
+* Bugfixes
+
+== 0.6.27
+* Clear caches when tmp/clear.txt touched
+* Bugfixes
+
+== 0.6.26
+* Added --no-rollback option to app update
+* Routes by HTTP methods, as a main test or as :http_method option; 
+* Refactored Controller#url and related methods
+* Fixed Etc.getpwuid error on Windows
+* Condition#initialize now accepts a Proc, which must return the argument
+* Fixed SASS files not being skipped in production
+* Removed caching of Spider.site
+* Jquery UI nested sortable fix
+* Runmode from config now always takes lowest precedence
+* Various minor fixes
+
+= 0.6.25
+== 07 March, 2012
+* Fixed error when starting irb console
+* Dashes in widget ids are now replaced by underscores automatically (to allow widget paths)
+* Fixes in app install
+* Fixed GetText domain setting in overrides and JavaScript
+
+= 0.6.24
+== 24 February, 2012
+* Use Rack instead of custom adapters for all servers
+* Use Pry for spider console if available
+* Input widgets are no longer wrapped in divs
+* #before and #after are no longer executed for static files
+* Various fixes, some api documentation
+
+
+= 0.6.23
+== 6 February, 2012
+* Config options can now have a Proc for :choices; new :fallback param to reuse other config
+* Added new-link, edit-link attributes to Crud
+* Added Twitter Bootstrap 2 to core components
+* Updated CKEditor
+* Added test folder to app blueprint
+* Minor fixes
+
+= 0.6.22
+== 14 December, 2011
+* New core admin app
+* Core widgets now include only minimal CSS
+* SASS, Compass and Less support
+* Added dependency on Backports gem
+* Branches support for app server and client
+* Interactive/non-interactive modes in setup
+* Added Model::Request.strict, which creates a Request that is not auto-expanded
+* Added support for aggregates in query Request; added explicit 'group by' option in Query.
+* Much improved Tree model mixin
+* DbMapper#bulk_update now allows nil conditions (whole table update)
+* Static requests are now logged according to log.static_extensions config option (only errors are fully
+  logged by default, otherwise only a GET line is printed)
+* Added fallback routes for Controllers (with 'route nil :destination')
+* :do proc in Route now receives the matched part as an argument (in addition to route arguments)
+* Fixed error messages being printed multiple times
+* Each Controller's before and after methods are now executed only once when there are routes to self
+* Fixes for Windows and JRuby 
+* Migrations now can refer to previous version's models through Migrations::PreviousModel
+* Added RenameElement migration
+* All form inputs are now wrapped in DIVs
+* Fixed error in MySQL when synching schemas that change the primary autoincrement key
+* Added :fixed attribute to DbSchema#set_foreign_key
+* Widget.parse_content_xml is now responsible for wrapping the xml to construct a document
+* FileInput widget now saves to var/data/uploaded_files instead of data/uploaded_files
+* Widget attributes now can have a dash ('-') in their name; the dash is replaced with an
+  underscore in variables
+* Fixed broken app update command
+* An object's children are no longer added to the UnitOfWork if they are unmodified
+* Added template.cache.use_fssm to clear template cache on file change (faster alternative to template.cache.disable)
+* Various other minor fixes and enhancements
+
+= 0.6.21
+== 03 November, 2011
+* require 'spidefw' no longer runs Spider.init(); use require 'spiderfw/init' instead
+* Support for home Gettext translations
+* Fixed stupid memory leak
+* Avoid some useless queries and joins in DbMapper
+* Enabled home Gemfile
+* Ruby 1.9.3 support
+* Updated test for new Capybara
+* Fixed unescaped text in views variables
+* Added BaseModel#own_elements method to list non-integrated elements
+* Changed Controller before and after calling to avoid problems in subclassed controllers
+
+= 0.6.20
+== 05 October, 2011
+* Added support for aggregate functions in DB conditions
+* Added after_load event to Form widget to allow manipulation of the loaded object
+* Fixed error Table Widget when paginate attribute is set to false
+* Improved DB join generation
+
+= 0.6.19
+== 21 September, 2011
+* Fixes: DbMapper join logic, configuration editor, js files compilation, Rack set_body_io (used by SOAP)
+
+= 0.6.18
+== 16 September, 2011
+* Thread management (keeps track of threads to wait for when exiting)
+* Under Phusion Passenger, controller's 'after' is now executed when the response is sent
+* Table widget now accepts a link_id not in the Table's shown elements
+* CLDR fixes
+* Updater fixes
+
+= 0.6.17
+== 13 September, 2011
+* AppManager rewrite, with setup tasks; Migrations
+* Experimental SASS support
+* CLDR 0.1.6; added Spider::I18n.list
+* InlineModels can now be compared with their primary key
+* Various bugfixes and enhancements
+
+= 0.6.16
+== 22 August, 2011
+* Bugfixes
+
+= 0.6.15
+== 9 August, 2011
+* Various fixes and enhancements
+
+= 0.6.14
+== 4 August, 2011
+* Installer and Windows fixes
+
+= 0.6.13
+== 3 August, 2011
+* Fixed bug in configuration editor
+
+= 0.6.12
+== 3 August, 2011
+* Minor fixes
+
+= 0.6.11
+== 2 August, 2011
+* Fixed app create command
+
+= 0.6.10
+== 2 August, 2011
+* Bugfixes
+
+= 0.6.9
+== 28 July, 2011
+* App installer now uses Git gem instead of Grit for better Windows compatibility
+* Switched from GetText to FastGettext; text domains are now used for each app
+
+= 0.6.8
+== 26 July, 2011
+* Windows fix (no HUP trapping)
+
+= 0.6.7
+== 26 July, 2011
+* Process management and app setup enhancements
+
+= 0.6.6
+== 19 July, 2011
+* Fix: use SEE_OTHER as default redirect code to avoid FF 5 caching
+* Fix: follow symlinks in base paths
+* Fix: reworked resource paths, views inclusion and extension now more reliable
+* Tree mixin now has tree_position, ordering
+* DB dumping
+* Better process management
+* Added bin/spider to default home
+
+= 0.6.5
+== 29 June, 2011
+* Mapper fixes
+
+= 0.6.4
+== 29 June, 2011
+* Fixed non-interactive "spider create home"
+
+= 0.6.3
+== 28 June, 2011
+* Bugfixes
+
+= 0.6.2
+= 10 June, 2011
+* More flexible Admin widget
+* Fixes and enhancements
+
+= 0.6.1
+== 2 May, 2011
+* Bundler support
+* Bugfixes
+
+= 0.6.0
+== 20 April, 2011
+* Test support
+* JRuby support
+* Document storage
+* Many bugfixes
+
+= 0.5.19
+== 23 December, 2010
+* Made Ripl an optional dependency, since Bond can't be build on JRuby
+* Fixed bug in assets with compressed="true"
+
+= 0.5.18
+== 23 December, 2010
+* Ripl for spider console
+* Ruby 1.9.2 support
+* Bugfixes
+
+= 0.5.17
+== 20 December, 2010
+* Better assets compression; assets profiles
+* Bugfixes
+
+= 0.5.16
+== 07 December, 2010
+* Added app update command
+* Fixed templates extension for overridden templates
+* Added Query#only_one, BaseModel#_check_if_saved
+* Bugfixes
+
+= 0.5.15
+== 26 November, 2010
+* BaseModel.from_hash_dump, :reverse option in extend_model
+* Spider.http_client util
+* Bugfixes
+
+= 0.5.14
+== 24 November, 2010
+* App management, setup wizard, configuration editor
+* Assets compressing
+* IdentityMapper, UnitOfWork and versioning
+* Role Based Access Control
+* Messenger backends
+* HtmlArea
+* Master and Servant apps
+* Many bugfixes and new methods
+
+= 0.5.13
+== 17 June, 2010
+* Changed gem dipendency from json to json_pure
+
+= 0.5.12
+== 17 June, 2010
+* JRuby support, Oracle JDBC connector
+
+= 0.5.11
+=== 15 June, 2010
+* Many bugfixes
+* Javascript api enhancements, JS plugins
+* Minor Visual refactoring
+* Autogenerated DataTypes

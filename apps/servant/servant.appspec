@@ -1,0 +1,4 @@
+name "Servant"
+version "0.1"
+author "Ivan Pirlik"
+gems "httpclient"

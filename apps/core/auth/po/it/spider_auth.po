@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Spider::Auth 0.1\n"
+"POT-Creation-Date: 2011-09-13 14:25+0200\n"
+"PO-Revision-Date: 2010-11-02 18:13+0100\n"
+"Last-Translator: Ivan Pirlik <ivan.pirlik@soluzionipa.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: controllers/mixins/auth_helper.rb:66
+msgid "Please login first"
+msgstr "Per favore, esegui il login"
+
+#: models/digest_user.rb:17
+msgid ""
+"You must always supply the password to a DigestUser when updating username "
+"or realm"
+msgstr ""
+"È necessario sempre specificare la password di un DigestUser quando si "
+"modifica lo username o il realm"
+
+#: models/group.rb:11
+msgid "Label"
+msgstr "Descrizione"
+
+#: models/group.rb:12
+msgid "Name"
+msgstr "Nome"
+
+#: models/login_user.rb:7
+msgid "The username contains disallowed characters"
+msgstr "Il nome utente contiene caratteri non permessi"
+
+#: models/mixins/authentication_tracking.rb:6
+msgid "Last login"
+msgstr "Ultima login"
+
+#: models/mixins/authentication_tracking.rb:7
+msgid "Login count"
+msgstr "Numero login"
+
+#: models/mixins/rbac_provider.rb:66
+msgid "%s permissions"
+msgstr "Permessi %s"
+
+#: models/super_user.rb:5
+msgid "Superuser"
+msgstr "Amministratore"
+
+#: models/super_user.rb:5
+msgid "Superusers"
+msgstr "Amministratori"
