@@ -1,0 +1,93 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+applicationSuite: Next - Servizi OnLine
+categories:
+  - communications
+  - contact-management
+  - workflow-management
+description:
+  it:
+    apiDocumentation: 'https://github.com/ComunediAlessandria/Framework'
+    documentation: 'https://github.com/ComunediAlessandria/Framework'
+    features:
+      - Componenti di base per Next - Servizi OnLine
+    genericName: Servizi OnLine
+    longDescription: >
+      Il Framework è un'insieme di componenti e funzioni che vengono poi
+      utlizzate dalle varie applicazioni.
+
+
+      Il framework si occuppa di tutta la parte infrastrutturale fornendo poi
+      alle applicazioni delle funzioni specifiche.
+
+
+      E' sviluppato in Ruby secondo il paradigma del Model View Controller
+
+
+      Nel dettaglio il framework di preoccupa di:
+
+
+      - gestione database: dalla connessione all'esecuzione delle query
+
+      - gestione della sicurezza: sanitizzazione delle chiamate e controlli
+      utente
+
+      - sistema di trasporto messaggi email ed sms
+
+      - Single SignOn mediante gli standard SAML2 e CAS: offre funzioni server e
+      metodi client
+    shortDescription: 'Componenti di base per Next - Servizi Online '
+developmentStatus: stable
+inputTypes:
+  - text/csv
+  - application/json
+intendedAudience:
+  countries:
+    - it
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: true
+    misureMinimeSicurezza: true
+    modelloInteroperabilita: true
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: true
+    spid: true
+landingURL: 'https://github.com/ComunediAlessandria/Framework'
+legal:
+  license: AGPL-3.0-or-later
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: false
+maintenance:
+  contacts:
+    - email: helpdesk.pa@dedagroup.it
+      name: Servizio Clienti
+  contractors:
+    - name: Dedagroup Public Services Srl
+      until: '2025-12-31'
+      website: 'https://www.civilianext.it'
+  type: contract
+name: 'Framework - Spider '
+outputTypes:
+  - text/csv
+  - application/json
+  - text/html
+platforms:
+  - web
+  - windows
+  - mac
+  - linux
+  - ios
+releaseDate: '2019-10-31'
+softwareType: standalone/web
+url: 'https://github.com/ComunediAlessandria/Framework'
+usedBy:
+  - Comune di Alessandria
