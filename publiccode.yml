@@ -61,7 +61,7 @@ it:
     spid: true
 landingURL: 'https://github.com/ComunediAlessandria/Framework'
 legal:
-  license: AGPL-3.0-or-later
+  license: MIT
 localisation:
   availableLanguages:
     - it
