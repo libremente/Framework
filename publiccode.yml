@@ -48,6 +48,8 @@ intendedAudience:
   countries:
     - it
 it:
+  riuso:
+    codiceIPA: c_a182
   conforme:
     gdpr: true
     lineeGuidaDesign: true
